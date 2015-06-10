@@ -4,7 +4,7 @@ angular
     $routeProvider
       .when('/login', {
         templateUrl: '/assets/auth/login.html',
-        controller: 'LoginCtrl',
+        controller: 'AuthCtrl',
         controllerAs: 'auth'
       })
       .when('/logout', {
