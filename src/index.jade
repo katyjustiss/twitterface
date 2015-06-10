@@ -1,5 +1,5 @@
 doctype html
-html(lang="en", ng-app="addressBook")
+html(lang="en", ng-app="twitterFace")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -9,6 +9,7 @@ html(lang="en", ng-app="addressBook")
     link(rel="stylesheet", href="/assets/main.css")
   body
     .container
+      .app(ng-view)
 
   script(src="lib/build.js")
   script(src="assets/main.module.js")
