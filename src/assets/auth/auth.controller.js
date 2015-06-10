@@ -1,6 +1,6 @@
 angular
   .module('twitterFace')
-  .controller('AuthCtrl', function ($rootScope, $scope, $location, API_URL) {
+  .controller('AuthCtrl', function ($rootScope, $scope, $location, API_URL, Profile) {
     var main = this;
 
     main.onModalLoad = function(){
@@ -10,6 +10,12 @@ angular
         $scope.$apply();
       });
     }
+
+    main.saveProfile = function() {
+      Profile.create(auth.person, function(res){
+        console.log(res)
+      })
+    };
 
     main.login = function () {
       var fb = new Firebase(API_URL);

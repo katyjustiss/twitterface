@@ -12,4 +12,8 @@ angular
         controller: 'LogoutCtrl',
         controllerAs: 'auth'
       })
+      .when('/', {
+      controller: 'AuthCtrl',
+      controllerAs: 'auth'
+      })
   });
