@@ -7,4 +7,9 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'auth'
       })
+      .when('/logout', {
+        template: '<h1>Logging out...</h1>',
+        controller: 'LogoutCtrl',
+        controllerAs: 'auth'
+      })
   });

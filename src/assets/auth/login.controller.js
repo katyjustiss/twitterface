@@ -14,7 +14,7 @@ angular
           console.log('Error', err)
         } else {
           $rootScope.auth = authData;
-          $location.path('/people');
+          $location.path('/');
           $scope.$apply();
         }
       });
