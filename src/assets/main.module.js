@@ -1,2 +1,2 @@
 angular
-  .module('twitterFace', ['ngRoute']);
+  .module('twitterFace', ['ngRoute'])
