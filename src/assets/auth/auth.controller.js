@@ -23,8 +23,8 @@ angular
         }else{
           console.log(userData.uid)
           Profile.create(main.person, userData.uid, function(res){
-            console.log(res)
-          main.login(res.email, res.password)
+            console.log(res);
+            main.login(res.email, res.password);
           })
         }
       });

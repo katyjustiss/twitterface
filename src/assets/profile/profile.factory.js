@@ -12,9 +12,9 @@ angular
           .get(`${API_URL}/profile.json`)
           .success(cb);
       },
-      addFriend(data, uid, cb){
+      addFriend(uid, data, cb){
         $http
-          .put(`${API_URL}/friends/${uid}.json`, data)
+          .post(`${API_URL}/friends/${uid}.json`, JSON.stringify(data))
           .success(cb)
       },
       getOne(uid, cb){
