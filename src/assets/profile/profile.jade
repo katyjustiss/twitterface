@@ -4,8 +4,7 @@ a(href='#/friends')
   h2 My Friends
 
 h2 New Friends
-table.table
-  tr
-    td(ng-repeat="(id, person) in profile.person")
-      a(href="#/people/{{id}}")
-        img(ng-src="{{person.photo}}")
+
+.newFriend(ng-repeat="(id, person) in profile.person")
+  a(href="#/people/{{id}}")
+    img(ng-src="{{person.photo}}")
