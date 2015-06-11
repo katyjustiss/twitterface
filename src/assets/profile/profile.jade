@@ -1,0 +1,7 @@
+h1 TwitterFace
+h2 Search
+input(placeholder="Search")
+h2 Addresses
+.gallery
+  .person(ng-repeat="(id, person) in profile.person")
+    img(ng-src="{{person.photo}}")
