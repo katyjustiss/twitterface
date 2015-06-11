@@ -8,13 +8,10 @@ angular
 
     Profile.getFriends(userData.uid, function(res) {
       main.friendObj = res;
-      console.log(res);
       for (var friend in main.friendObj) {
         Profile.getOne(main.friendObj[friend], function(arg) {
           main.friendProfile.push(arg);
-          console.log(arg);
         })
       }
     })
-
   })
