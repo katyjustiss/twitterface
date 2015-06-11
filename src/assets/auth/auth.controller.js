@@ -41,7 +41,7 @@ angular
         } else {
           $rootScope.auth = authData;
           $('#modal').modal('hide');
-          $location.path('/');
+          $location.path('/newfriends');
           $scope.$apply();
         }
       });
