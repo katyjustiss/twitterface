@@ -8,6 +8,6 @@ form(name="loginForm")
     label.control-label Password
     input.form-control(type="password", ng-model="auth.password")
   button.btn.btn-primary(ng-click="auth.onModalLoad()") Register
-  button.btn.btn-info(ng-click="auth.login()") Login
+  button.btn.btn-info(ng-click="auth.login(auth.email, auth.password)") Login
   button.btn.btn-danger Change Password
 div(ng-include="'assets/profile/modal.html'")

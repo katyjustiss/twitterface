@@ -24,21 +24,23 @@ angular
           console.log(userData.uid)
           Profile.create(main.person, userData.uid, function(res){
             console.log(res)
+          main.login(res.email, res.password)
           })
         }
       });
 
     };
 
-    main.login = function () {
+    main.login = function (email, password) {
       fb.authWithPassword({
-        email: main.email,
-        password: main.password
+        email: email,
+        password: password
       }, function (err, authData) {
         if (err) {
           console.log('Error', err)
         } else {
           $rootScope.auth = authData;
+          $('#modal').modal('hide');
           $location.path('/');
           $scope.$apply();
         }
