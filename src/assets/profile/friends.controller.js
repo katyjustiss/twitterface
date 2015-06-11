@@ -6,8 +6,13 @@ angular
     var userData = fb.getAuth();
 
     Profile.getFriends(userData.uid, function(res) {
-      console.log(res)
       main.friendObj = res;
+      for (var friend in main.friendObj) {
+        Profile.getOne(main.friendObj[friend], function(arg) {
+          console.log(arg)
+          main.friendProfile = arg;
+        })
+      }
     })
 
   })

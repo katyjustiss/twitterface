@@ -4,6 +4,6 @@ input(placeholder="Search")
 h2 Your Friends
 table.table
   tr
-    td(ng-repeat="(id, person) in profile.friendObj")
+    td(ng-repeat="(id, person) in profile.friendProfile")
       a(href="#/people/{{id}}")
         p {{person}}
