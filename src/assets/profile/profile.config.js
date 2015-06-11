@@ -12,4 +12,9 @@ angular
         controller: 'PersonCtrl',
         controllerAs: 'profile'
       })
+      .when('/friends', {
+        templateUrl: '/assets/profile/friends.html',
+        controller: 'FriendsCtrl',
+        controllerAs: 'profile'
+      })
     })

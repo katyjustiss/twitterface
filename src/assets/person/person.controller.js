@@ -12,7 +12,6 @@ angular
     var userData = fb.getAuth();
 
     main.friendMe = function(){
-      debugger;
       Profile.addFriend(userData.uid , main.id, function(res){
         console.log(res);
       });

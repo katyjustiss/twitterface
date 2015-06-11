@@ -21,6 +21,11 @@ angular
         $http
           .get(`${API_URL}/profile/${uid}.json`)
           .success(cb);
+      },
+      getFriends(uid, cb){
+        $http
+          .get(`${API_URL}/friends/${uid}.json`)
+          .success(cb);
       }
     }
   });

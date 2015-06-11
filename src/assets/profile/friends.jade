@@ -1,0 +1,9 @@
+h1 TwitterFace
+h2 Search
+input(placeholder="Search")
+h2 Your Friends
+table.table
+  tr
+    td(ng-repeat="(id, person) in profile.friendObj")
+      a(href="#/people/{{id}}")
+        p {{person}}
