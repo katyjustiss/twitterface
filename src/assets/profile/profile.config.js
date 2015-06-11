@@ -7,4 +7,9 @@ angular
         controller: 'ProfileCtrl',
         controllerAs: 'profile'
       })
+      .when('/people/:id', {
+        templateUrl: '/assets/person/person.html',
+        controller: 'PersonCtrl',
+        controllerAs: 'profile'
+      })
     })
