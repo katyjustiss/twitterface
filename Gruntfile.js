@@ -152,8 +152,8 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          'public/css/main.css',
-          'public/js/**/*.js',
+          'public/assets/main.css',
+          'public/assets/**/*.js',
           'public/**/*.html'
         ]
       },
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
         tasks: ['sass:dev', 'autoprefixer']
       },
       js: {
-        files: ['src/js/**/*.js'],
+        files: ['src/assets/**/*.js'],
         tasks: ['babel:dev']
       }
     }

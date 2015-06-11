@@ -12,7 +12,7 @@ angular
     }
 
     main.saveProfile = function() {
-      Profile.create(auth.person, function(res){
+      Profile.create(main.person, function(res){
         console.log(res)
       })
     };
