@@ -11,4 +11,4 @@
   .friendContainer
     .newFriend(ng-repeat="(id, person) in profile.people")
       a(href="#/people/{{id}}")
-        img.picture.thumbnail(ng-src="{{person.photo}}")
+        img.picture.thumbnail(ng-src="{{person.photo}}" data-id="{{id}}" ng-class="{'faded': profile.friendArr.indexOf(id)!==-1}")
