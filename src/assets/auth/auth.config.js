@@ -5,7 +5,14 @@ angular
       .when('/login', {
         templateUrl: '/assets/auth/login.html',
         controller: 'AuthCtrl',
-        controllerAs: 'auth'
+        controllerAs: 'auth',
+        resolve: {
+          checkLogin: function ($rootScope, $location) {
+            if ($rootScope.auth) {
+              $location.path('/newFriends')
+            }
+          }
+        }
       })
       .when('/logout', {
         template: '<h1>Logging out...</h1>',
@@ -13,6 +20,7 @@ angular
         controllerAs: 'auth'
       })
       .when('/', {
+      templateUrl: '/assets/profile/profile.html',
       controller: 'AuthCtrl',
       controllerAs: 'auth'
       })

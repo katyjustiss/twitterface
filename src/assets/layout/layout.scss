@@ -1,0 +1,46 @@
+body {
+  font-family: 'Domine', serif, Arial;
+}
+
+h1 {
+  font-family: 'Montserrat', serif, Arial;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.all-members {
+  width: 80%;
+  margin: 2% auto;
+}
+
+.friendContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.picture {
+  width: auto;
+  height: 150px;
+}
+
+.profile {
+  width: 50%;
+  margin: 2% auto;
+  background: rgba(238,238,238, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.32);
+  padding: 4%;
+  border-radius: 15px;
+}
+
+.table {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.add {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}

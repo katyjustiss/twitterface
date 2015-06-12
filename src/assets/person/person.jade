@@ -1,8 +1,8 @@
-.jumbotron
+.profile.center-content
   h1 {{profile.person.name}}
   img(ng-src="{{profile.person.photo}}")
-.info
-  h3 I'm {{profile.person.age}} years old
-  p and I enjoy {{profile.person.hobbies}}
-.add
-  button.btn.btn-lg.btn-info(ng-click="profile.friendMe()") Friend Me!
+  .info
+    h3 I'm {{profile.person.age}} years old
+    h4 and I enjoy {{profile.person.hobbies}}
+  .add
+    button.btn.btn-lg.btn-info(ng-click="profile.friendMe()") Friend Me!

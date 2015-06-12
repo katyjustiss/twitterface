@@ -10,11 +10,13 @@ angular
       .when('/people/:id', {
         templateUrl: '/assets/person/person.html',
         controller: 'PersonCtrl',
-        controllerAs: 'profile'
+        controllerAs: 'profile',
+        private: true
       })
       .when('/friends', {
         templateUrl: '/assets/profile/friends.html',
         controller: 'FriendsCtrl',
-        controllerAs: 'profile'
+        controllerAs: 'profile',
+        private: true
       })
     })

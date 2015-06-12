@@ -1,10 +1,14 @@
-h1 TwitterFace
+.jumbotron.center-content
+  h1 TwitterFace
 
-a(href='#/friends')
-  h2 My Friends
+  h4 To prepare ourselves and future generations for the inevitable robot cat takeover.
 
-h2 New Friends
+  a(href='#/friends')
+    h3 My Friends
 
-.newFriend(ng-repeat="(id, person) in profile.person")
-  a(href="#/people/{{id}}")
-    img(ng-src="{{person.photo}}")
+.all-members
+  h2 All Members
+  .friendContainer
+    .newFriend(ng-repeat="(id, person) in profile.person")
+      a(href="#/people/{{id}}")
+        img.picture.thumbnail(ng-src="{{person.photo}}")

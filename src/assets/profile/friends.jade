@@ -1,7 +1,15 @@
-h1 TwitterFace
+.jumbotron.center-content
+  h1 TwitterFace
+  h4 To prepare ourselves and future generations for the inevitable robot cat takeover.
 
-h2 My Friends
-table.table
+
+h2.center-content My Friends
+table.table.table-hover
+  tr
+    th Name
+    th Age
+    th Hobbies
+    th Profile Picture
   tr(ng-repeat="profile in profile.friendProfile")
     td{{profile.name}}
     td{{profile.age}}
