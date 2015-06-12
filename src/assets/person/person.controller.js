@@ -23,7 +23,6 @@ angular
     main.friendMe = function(){
 
       Profile.addFriend(userData.uid , main.id, function(res){
-        console.log(res);
         $location.path('/friends');
         // $scope.$apply();
       });
