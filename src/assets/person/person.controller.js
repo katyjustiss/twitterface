@@ -1,6 +1,6 @@
 angular
   .module('twitterFace')
-  .controller('PersonCtrl', function(Profile, $routeParams, API_URL){
+  .controller('PersonCtrl', function($scope, Profile, $routeParams, API_URL, $location){
     var main = this;
     main.id = $routeParams.id;
     var fb = new Firebase(API_URL);
@@ -11,9 +11,21 @@ angular
 
     var userData = fb.getAuth();
 
+    Profile.getFriends(userData.uid, function(res){
+      main.friendObj = res;
+      for (var friend in main.friendObj){
+        if(main.friendObj[friend] === main.id){
+          $('.btn').attr('disabled', 'disabled');
+        }
+      }
+    })
+
     main.friendMe = function(){
+
       Profile.addFriend(userData.uid , main.id, function(res){
         console.log(res);
+        $location.path('/friends');
+        // $scope.$apply();
       });
     }
 

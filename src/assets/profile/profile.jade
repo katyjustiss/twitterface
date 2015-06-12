@@ -9,6 +9,9 @@
 .all-members
   h2 All Members
   .friendContainer
-    .newFriend(ng-repeat="(id, person) in profile.person")
+    .newFriend(ng-repeat="(id, person) in profile.people")
       a(href="#/people/{{id}}")
         img.picture.thumbnail(ng-src="{{person.photo}}")
+    .alreadyFriend(ng-repeat="(num, picture) in profile.pictures")
+      a(href="#/people/{{num}}")
+        img.picture.thumbnail.faded(ng-src="{{picture.photo}}")
